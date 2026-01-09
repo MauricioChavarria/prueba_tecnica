@@ -10,12 +10,12 @@ def calcular_prioridad_total(s: Solicitud):
     }
     score = pesos_tipo.get(s.tipo, 0)
 
-    # Peso Prioridad Manual
+    # peso Prioridad Manual
     score += (s.prioridadManual * 10)
 
-    # Antigüedad, puntos por cada hora que ha pasado
+    # antiguedad
     segundos_transcurridos = (datetime.now() - s.fechaCreacion).total_seconds()
     horas = segundos_transcurridos / 3600
-    score += horas * 2 # 2 puntos
+    score += horas * 2 # 2 p/h
 
     return round(score, 2)
