@@ -34,12 +34,12 @@ def listar():
     ]
 
 @app.delete("/solicitudes/{solicitud_id}")
-async def eliminar_solicitud(solicitud_id: int):
-    global solicitudes_db
-    inicial = len(solicitudes_db)
-    solicitudes_db = [s for s in solicitudes_db if s.id != solicitud_id]
-    
-    if len(solicitudes_db) == inicial:
+def eliminar_solicitud(solicitud_id: int):
+    global db_memoria
+    inicial = len(db_memoria)
+    db_memoria = [s for s in db_memoria if s.id != solicitud_id]
+
+    if len(db_memoria) == inicial:
         raise HTTPException(status_code=404, detail="ID no encontrado")
-        
+
     return {"status": "success", "message": f"Solicitud {solicitud_id} eliminada"}
