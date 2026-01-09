@@ -10,6 +10,6 @@ class TipoSolicitud(str, Enum):
 class Solicitud(BaseModel):
     id: int
     tipo: TipoSolicitud
-    prioridadManual: int  # 1 a 5
+    prioridadManual: int
     fechaCreacion: datetime
     usuario: str

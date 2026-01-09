@@ -5,7 +5,6 @@ from logic import calcular_prioridad_total
 
 app = FastAPI()
 
-# Habilitar CORS para que React pueda conectarse
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -22,10 +21,8 @@ def registrar(s: Solicitud):
 
 @app.get("/solicitudes/priorizadas")
 def listar():
-    # Ordenamos usando la lógica de logic.py
     ordenadas = sorted(db_memoria, key=lambda x: calcular_prioridad_total(x), reverse=True)
     
-    # Devolvemos la lista con el cálculo incluido
     return [
         {**s.dict(), "prioridadCalculada": calcular_prioridad_total(s)} 
         for s in ordenadas

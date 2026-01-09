@@ -1,4 +1,4 @@
-# Motor de Reglas de Priorización - Prueba Técnica Protección 🚀
+# Motor de Reglas de Priorización - Prueba Técnica Protección
 
 Este proyecto implementa un sistema inteligente de gestión de solicitudes (tickets) que utiliza un algoritmo de pesaje dinámico para determinar el orden de atención, cumpliendo con los criterios de no "hardcodear" reglas fijas y permitir escalabilidad futura.
 
@@ -37,6 +37,7 @@ El proyecto sigue una **separación clara de capas** para facilitar el mantenimi
 cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload --port 8000
+
 
 ### 2. FrondEnd
 ```bash
