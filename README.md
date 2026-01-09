@@ -33,14 +33,12 @@ $$score = (PesoTipo) + (PrioridadManual \times 10) + (FactorTiempo)$$
 ##  Cómo ejecutar el proyecto
 
 ### 1. Backend
-```bash
-cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload --port 8000
+- cd backend
+- pip install -r requirements.txt
+- uvicorn main:app --reload --port 8000
 
 
 ### 2. FrondEnd
-```bash
-cd frontend
-npm install
-npm run dev
+- cd frontend
+- npm install
+- npm run dev
