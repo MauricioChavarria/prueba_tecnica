@@ -2,7 +2,7 @@
 
 Este proyecto implementa un sistema inteligente de gestión de solicitudes (tickets) que utiliza un algoritmo de pesaje dinámico para determinar el orden de atención, cumpliendo con los criterios de no "hardcodear" reglas fijas y permitir escalabilidad futura.
 
-## 🧠 Criterio de Priorización (El Motor)
+##  Criterio de Priorización (El Motor)
 
 Para evitar que las solicitudes se atiendan únicamente por orden de llegada o por un solo campo, se implementó una **fórmula de score compuesto**:
 
@@ -17,7 +17,7 @@ $$PrioridadFinal = (PesoTipo) + (PrioridadManual \times 10) + (FactorTiempo)$$
 3. **Factor de Antigüedad (Factor Tiempo):** Se suman **2 puntos por cada hora** transcurrida desde la creación. 
    * *Propósito:* Evitar el "estancamiento" de consultas o requerimientos bajos. Una consulta de hace 3 días puede llegar a tener más prioridad que un incidente recién creado.
 
-## 🏗️ Arquitectura del Sistema
+##  Arquitectura del Sistema
 
 El proyecto sigue una **separación clara de capas** para facilitar el mantenimiento:
 
@@ -30,10 +30,16 @@ El proyecto sigue una **separación clara de capas** para facilitar el mantenimi
 - UI minimalista centrada en el **Consumo de API**.
 - Componentización básica para mostrar la lista ordenada en tiempo real.
 
-## 🚀 Cómo ejecutar el proyecto
+##  Cómo ejecutar el proyecto
 
 ### 1. Backend
 ```bash
 cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload --port 8000
+
+### 2. FrondEnd
+```bash
+cd frontend
+npm install
+npm run dev
