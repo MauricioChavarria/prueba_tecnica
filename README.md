@@ -4,7 +4,7 @@ Este proyecto implementa un sistema inteligente de gestion de solicitudes que ut
 
 ##  Criterio de Priorizacion
 
-Para evitar que las solicitudes se atiendan unicamente por orden de llegada o por un solo campo, se implementa una **fórmula de score compuesto**:
+Para evitar que las solicitudes se atiendan unicamente por orden de llegada o por un solo campo, se implementa una **formula de score compuesto**:
 
 $$score = (PesoTipo) + (PrioridadManual \times 10) + (FactorTiempo)$$
 
