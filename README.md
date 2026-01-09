@@ -1,6 +1,6 @@
 # Motor de Reglas de Priorización - Prueba Técnica Protección
 
-Este proyecto implementa un sistema inteligente de gestion de solicitudes que utiliza un algoritmo de pesaje dinámico para determinar el orden de atencion, cumpliendo con los criterios de no "hardcodear" reglas fijas y permitir escalabilidad futura.
+Este proyecto implementa un sistema inteligente de gestion de solicitudes que utiliza un algoritmo de pesaje dinamico para determinar el orden de atencion, cumpliendo con los criterios de no "hardcodear" reglas fijas y permitir escalabilidad futura.
 
 ##  Criterio de Priorizacion
 
